@@ -1,1 +1,132 @@
-/* You can add global styles to this file, and also import other style files */
+/* ==========================
+   FONT E COLORI GLOBALI
+========================== */
+@import url('https://fonts.googleapis.com/css2?family=Inspiration&display=swap');
+
+body,
+html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+    font-family: 'Inspiration', sans-serif;
+    color: #f0f0f0;
+    overflow-x: hidden;
+}
+
+/* Titoli */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.big-title {
+    font-family: 'Inspiration', sans-serif;
+    font-weight: 700;
+    font-style: italic;
+    color: #f0f0f0;
+    text-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+}
+
+/* Elemento speciale per la Hero Section */
+
+/* Testi secondari */
+p,
+span,
+li {
+    color: #eaeaea;
+}
+
+/* Link */
+a {
+    color: #4ef5c4;
+    text-decoration: none;
+    transition: 0.3s;
+    text-shadow: 0 0 2px rgba(0, 0, 0, 0.5);
+}
+
+a:hover {
+    color: #ff7f6f;
+    text-shadow: 0 0 5px #ff7f6f, 0 0 10px #4ef5c4;
+}
+
+/* Pulsanti */
+button {
+    font-family: 'Inspiration', sans-serif;
+    font-weight: 700;
+    font-style: italic;
+    color: #fff;
+    background: linear-gradient(45deg, #ff7f6f, #ffd36f, #b780ff, #50dfff, #ff7fd9, #4ef5c4, #fff77f, #ff8fb6);
+    background-size: 1600% 1600%;
+    animation: gradientBG 30s ease infinite;
+    border: none;
+    padding: 1rem 2rem;
+    border-radius: 0.8rem;
+    cursor: pointer;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+button:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 15px #ff7f6f, 0 0 30px #4ef5c4, 0 0 45px #50dfff;
+}
+
+/* ==========================
+   SFONDO ESPLOSIVO PASTELLO VIBRANTE
+========================== */
+body {
+    background: linear-gradient(45deg, #ff7f6f, #ffd36f, #b780ff, #50dfff, #ff7fd9, #4ef5c4, #fff77f, #ff8fb6);
+    background-size: 1600% 1600%;
+    animation: gradientBG 30s ease infinite;
+}
+
+/* Animazione gradient */
+@keyframes gradientBG {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    25% {
+        background-position: 50% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    75% {
+        background-position: 50% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+/* Overlay leggero */
+.main-overlay {
+    position: relative;
+    z-index: 1;
+}
+
+.main-overlay::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.15);
+    pointer-events: none;
+    z-index: -1;
+}
+
+i {
+    font-size: 1.5rem;
+    /* grandezza */
+    color: #000;
+    /* colore */
+    margin-right: 1rem;
+    cursor: pointer;
+}

@@ -1,0 +1,54 @@
+@import url('https://fonts.googleapis.com/css2?family=Lora:wght@400;500;600;700&display=swap');
+
+.contentCont {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    padding: 0.5rem;
+}
+
+.little {
+    font-family: 'Lora', serif;
+    font-weight: 600;
+    margin-top: 2rem;
+    font-size: 2rem;
+    text-shadow: 0 0 2px rgba(0, 0, 0, 11.5) !important;
+
+    .black-text {
+        color: #000;
+        text-shadow: 0 0 10px rgba(0, 0, 0, 11.5) !important;
+    }
+}
+
+.social {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: flex-end;
+    gap: 4rem;
+    margin-bottom: 1.5rem;
+}
+
+.contact {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: flex-end;
+    gap: 2rem;
+    margin-bottom: 1.5rem;
+    padding-right: 4rem;
+}
+
+img {
+    width: 200px;
+    /* regola la dimensione della foto */
+    height: 200px;
+    /* puoi anche usare auto per mantenere proporzioni */
+    object-fit: cover;
+    /* taglia eventuali parti in eccesso */
+}
+
+.size {
+    font-size: 3.5rem;
+}

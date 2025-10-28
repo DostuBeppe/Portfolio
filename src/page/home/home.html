@@ -1,0 +1,38 @@
+<div class="contentName">
+    
+    <div class="heroSection">
+        <span class="big-title">
+            Benedetta <span class="little">Russo</span>
+        </span>
+    </div>
+    <div class="hero-image">
+        <img src="assets/img/1.jpg" alt="Foto di Benedetta">
+    </div>
+</div>
+<div class="contentExp">
+    <div class="listExp">
+        <div class="little-exp" (click)="setExp(Esperienze.TV)">Esperienza TV</div>
+        <div class="little-exp" (click)="setExp(Esperienze.MUSICAL)">Musical e Teatro</div>
+        <div class="little-exp" (click)="setExp(Esperienze.INEDITI)">Inediti</div>
+        <div class="little-exp" (click)="setExp(Esperienze.FORMAZIONE)">Formazione</div>
+        <div class="little-exp" (click)="setExp(Esperienze.CONTATTI)">Contatti</div>
+    </div>
+</div>
+<div>
+   @if(activeExp === Esperienze.INEDITI){
+       <app-inediti></app-inediti>
+   }
+   @if(activeExp === Esperienze.TV){
+       <app-exp-tv></app-exp-tv>
+   }
+   @if(activeExp === Esperienze.MUSICAL){
+       <app-mus-tea></app-mus-tea>
+   }
+   @if(activeExp === Esperienze.CONTATTI){
+       <app-contatti></app-contatti>
+   }
+   @if(activeExp === Esperienze.FORMAZIONE){
+       <app-formazione></app-formazione>
+   }
+</div>
+
