@@ -10,14 +10,19 @@
     </div>
 </div>
 <div class="contentExp">
-    <div class="listExp">
-        <div class="little-exp" (click)="setExp(Esperienze.TV)">Esperienza TV</div>
-        <div class="little-exp" (click)="setExp(Esperienze.MUSICAL)">Musical e Teatro</div>
-        <div class="little-exp" (click)="setExp(Esperienze.INEDITI)">Inediti</div>
-        <div class="little-exp" (click)="setExp(Esperienze.FORMAZIONE)">Formazione</div>
-        <div class="little-exp" (click)="setExp(Esperienze.CONTATTI)">Contatti</div>
-    </div>
+  <!-- Bottone hamburger visibile solo su mobile -->
+  <button class="menu-toggle" (click)="toggleMenu()">☰</button>
+
+  <!-- Lista delle esperienze -->
+  <div class="listExp" [ngClass]="{'open': menuOpen}">
+    <div class="little-exp" (click)="setExp(Esperienze.TV)">Esperienza TV</div>
+    <div class="little-exp" (click)="setExp(Esperienze.MUSICAL)">Musical e Teatro</div>
+    <div class="little-exp" (click)="setExp(Esperienze.INEDITI)">Inediti</div>
+    <div class="little-exp" (click)="setExp(Esperienze.FORMAZIONE)">Formazione</div>
+    <div class="little-exp" (click)="setExp(Esperienze.CONTATTI)">Contatti</div>
+  </div>
 </div>
+
 <div>
    @if(activeExp === Esperienze.INEDITI){
        <app-inediti></app-inediti>
