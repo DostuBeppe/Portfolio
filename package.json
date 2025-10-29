@@ -6,7 +6,8 @@
     "start": "ng serve",
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
-    "test": "ng test"
+    "test": "ng test",
+    "deploy-files": "ng build --configuration production --base-href /Portfolio/ && xcopy docs\\browser\\* docs /E /I /Y && rmdir /S /Q docs\\browser"
   },
   "prettier": {
     "printWidth": 100,
@@ -22,6 +23,7 @@
   },
   "private": true,
   "dependencies": {
+    "@angular/cdk": "^20.2.10",
     "@angular/common": "^20.3.0",
     "@angular/compiler": "^20.3.0",
     "@angular/core": "^20.3.0",
